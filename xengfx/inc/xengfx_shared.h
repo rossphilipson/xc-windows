@@ -198,8 +198,8 @@ USHORT XenGfxVbeGetAlignedStride(const WORD CurrentModeStride);
 #define XENGFX_UNSET_BPP             0
 #define XENGFX_STD_BPP               32
 #define XENGFX_PAGE_ALIGN_MASK       0xFFF
-#define XENGFX_DEFAULT_VENDORID      0x1234;
-#define XENGFX_DEFAULT_DEVICEID      0x1111;
+#define XENGFX_DEFAULT_VENDORID      0x5853;
+#define XENGFX_DEFAULT_DEVICEID      0xC101;
 #define XENGFX_UNDEFINED_SCANLINE    ((UINT)-1)
 
 #define XENGFX_MASK_ALIGN(x, m) (((ULONG)x + m) & ~m)

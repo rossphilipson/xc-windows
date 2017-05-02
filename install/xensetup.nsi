@@ -386,13 +386,13 @@ IntCmp $0 1 done_do_vesa dev_notfound
 
 done_do_vesa:
 
-StrCpy $VesaDeviceName "PCI\VEN_1234&DEV_1111&SUBSYS_00015853"
+StrCpy $VesaDeviceName "PCI\VEN_5853&DEV_C101&SUBSYS_00015853"
 System::Call '${myFindExistingDevice}?e ("$VesaDeviceName") .r0'
 Pop $1 ; last error
 DetailPrint "vesa device detected - $0 $1"
 IntCmp $0 1 done
 
-StrCpy $VesaDeviceName "PCI\VEN_1234&DEV_1111"
+StrCpy $VesaDeviceName "PCI\VEN_5853&DEV_C101"
 System::Call '${myFindExistingDevice}?e ("$VesaDeviceName") .r0'
 Pop $1 ; last error
 DetailPrint "vesa device detected - $0 $1"
@@ -855,10 +855,10 @@ ${EndIf}
   Push "ROOT\XENEVTCHN"
   Call DeleteInstalledOemInf
 
-  Push "PCI\VEN_1234&DEV_1111&SUBSYS_00015853&REV_00"
+  Push "PCI\VEN_5853&DEV_C101&SUBSYS_00015853&REV_00"
   Call DeleteInstalledOemInf
 
-  Push "PCI\VEN_1234&DEV_1111"
+  Push "PCI\VEN_5853&DEV_C101"
   Call DeleteInstalledOemInf
 
   Push "PCI\VEN_8086&DEV_2415&CC_0401"
@@ -1304,8 +1304,8 @@ providerNotInstalled:
   ${EndIf}
   
 !ifdef INSTALL_XENVESA
-  ExecWait '"$INSTDIR\removedev.exe" "/d" "PCI\VEN_1234&DEV_1111&SUBSYS_00015853"' $0
-  ExecWait '"$INSTDIR\removedev.exe" "/d" "PCI\VEN_1234&DEV_1111"' $0
+  ExecWait '"$INSTDIR\removedev.exe" "/d" "PCI\VEN_5853&DEV_C101&SUBSYS_00015853"' $0
+  ExecWait '"$INSTDIR\removedev.exe" "/d" "PCI\VEN_5853&DEV_C101"' $0
 !ifdef INSTALL_XENVESA8
 ${If} "$OsType" == "8Plus"
   DeleteRegKey HKLM SYSTEM\CurrentControlSet\Services\xenvesado
@@ -1318,9 +1318,9 @@ ${If} "$OsType" != "8Plus"
   Delete /REBOOTOK $REALSYSDIR\drivers\xenvesa-miniport.sys
   Delete /REBOOTOK $REALSYSDIR\drivers\xenvesa-display.dll
 ${EndIf}
-  Push "PCI\VEN_1234&DEV_1111&SUBSYS_00015853"
+  Push "PCI\VEN_5853&DEV_C101&SUBSYS_00015853"
   Call un.DeleteInstalledOemInf
-	Push "PCI\VEN_1234&DEV_1111"
+	Push "PCI\VEN_5853&DEV_C101"
 	Call un.DeleteInstalledOemInf
 !endif
 

@@ -49,16 +49,16 @@ xenvesa-display.dll = 1
 %COMPANY% = OpenXT,NTamd64.6.0,NTamd64.6.1
 
 [OpenXT]
-%Xenvesa_Desc% = xenvesa, PCI\VEN_1234&DEV_1111
-%Xenvesa_Desc% = xenvesa, PCI\VEN_1234&DEV_1111&SUBSYS_00015853
+%Xenvesa_Desc% = xenvesa, PCI\VEN_5853&DEV_C101
+%Xenvesa_Desc% = xenvesa, PCI\VEN_5853&DEV_C101&SUBSYS_00015853
 
 [OpenXT.NTamd64.6.0]
-%Xenvesa_Desc% = xenvesa, PCI\VEN_1234&DEV_1111
-%Xenvesa_Desc% = xenvesa, PCI\VEN_1234&DEV_1111&SUBSYS_00015853
+%Xenvesa_Desc% = xenvesa, PCI\VEN_5853&DEV_C101
+%Xenvesa_Desc% = xenvesa, PCI\VEN_5853&DEV_C101&SUBSYS_00015853
 
 [OpenXT.NTamd64.6.1]
-%Xenvesa_Desc% = xenvesa, PCI\VEN_1234&DEV_1111
-%Xenvesa_Desc% = xenvesa, PCI\VEN_1234&DEV_1111&SUBSYS_00015853
+%Xenvesa_Desc% = xenvesa, PCI\VEN_5853&DEV_C101
+%Xenvesa_Desc% = xenvesa, PCI\VEN_5853&DEV_C101&SUBSYS_00015853
 
 [xenvesa]
 FeatureScore=FC
